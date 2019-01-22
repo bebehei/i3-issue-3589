@@ -13,6 +13,7 @@ public:
 
 public slots:
   void iconActivated(QSystemTrayIcon::ActivationReason);
+  void trayavail();
 
 private:
   QSystemTrayIcon* trayIcon;
