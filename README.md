@@ -1,6 +1,6 @@
 # QT system tray icon reproducer
 
-A small reproducer for https://github.com/bebehei/i3-issue-3589
+A small reproducer for https://github.com/i3/i3/issues/3589
 
 ## Building
 
