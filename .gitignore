@@ -1,1 +1,9 @@
 *.pro.user
+
+*.o
+/SysTray
+/Makefile
+/.qmake.stash
+/moc_mainwindow.cpp
+/moc_predefs.h
+/qrc_resources.cpp
