@@ -56,4 +56,5 @@ void MainWindow::iconActivated(QSystemTrayIcon::ActivationReason reason_)
 void MainWindow::trayavail(void)
 {
   std::cout << "Is available: " << this->trayIcon->isSystemTrayAvailable() << std::endl;
+  this->trayIcon->show();
 }
