@@ -26,6 +26,8 @@ MainWindow::MainWindow(QWidget *parent)
   // Displaying the tray icon
   this->trayIcon->show();     // Note: without explicitly calling show(), QSystemTrayIcon::activated signal will never be emitted!
 
+  previousavail = this->trayIcon->isSystemTrayAvailable();
+
   // Interaction
   connect(trayIcon, &QSystemTrayIcon::activated, this, &MainWindow::iconActivated);
 }
@@ -57,4 +59,14 @@ void MainWindow::trayavail(void)
 {
   bool avail = this->trayIcon->isSystemTrayAvailable();
   std::cout << "Is available: " << avail << std::endl;
+  if (avail != previousavail) {
+    if (avail) {
+      this->trayIcon->hide();
+      this->trayIcon->show();
+    } else {
+      this->trayIcon->hide();
+    }
+    std::cout << "Is visible: " << this->trayIcon->isVisible() << std::endl;
+  }
+  previousavail = avail;
 }

@@ -16,6 +16,7 @@ public slots:
   void trayavail();
 
 private:
+  bool previousavail;
   QSystemTrayIcon* trayIcon;
   QMenu* trayIconMenu;
 
